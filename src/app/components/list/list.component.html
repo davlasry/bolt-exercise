@@ -17,7 +17,9 @@
         <p>(1+1 module) maximizes server protection</p>
       </div>
       <div class="more-button">
-        <img src="assets/images/learn-more-blue-btn.png" alt="" />
+        <a [routerLink]="['/single-product']">
+          <img src="assets/images/learn-more-blue-btn.png" alt="" />
+        </a>
       </div>
     </div>
     <div class="product-images">
@@ -25,7 +27,7 @@
         <img src="assets/images/product_image1.png" alt="" />
       </div>
       <div class="miniatures">
-        <div class="miniature active">
+        <div class="miniature active Blue-line">
           <div
             id="small-image1-img"
             class="active-small-images"
@@ -33,17 +35,33 @@
           ></div>
           <img src="assets/images/product_image1.png" alt="" />
         </div>
-        <div class="miniature">
+        <div class="miniature Blue-line">
           <img src="assets/images/product_image2.png" alt="" />
         </div>
-        <div class="miniature">
+        <div class="miniature Blue-line">
           <img src="assets/images/product_image3.png" alt="" />
         </div>
-        <div class="miniature">
+        <div class="miniature Blue-line">
           <img src="assets/images/product_image4.png" alt="" />
         </div>
       </div>
     </div>
-    <div class="product-video"></div>
+    <div class="product-video" fxLayout="column" fxLayoutAlign="start center">
+      <div class="video-header" fxLayout="row">
+        <span class="video-header-title">Product </span
+        ><span class="video-header-subtitle">Video ></span>
+      </div>
+      <div class="video-content" fxLayout="column">
+        <img
+          src="assets/images/product_image1.png"
+          class="video-thumbnail"
+          alt=""
+        />
+        <span class="video-inside-title">ZJ60B</span>
+        <p class="video-inside-descriptions">
+          60 x 3.5”/2.5" Hot-swap hard drives
+        </p>
+      </div>
+    </div>
   </div>
 </div>

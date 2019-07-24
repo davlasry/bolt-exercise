@@ -1,35 +1,38 @@
 <div class="products-container" fxLayout="column" fxLayoutAlign="start center">
-  <div class="main-breadcrumb" fxLayout="row" fxLayoutAlign="center center">
-    <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center">
-      <span>Home</span>
-      <img src="assets/images/Breadcrumbs-arrow.png" alt="" />
-      <span>Products</span>
+  <div fxLayout="row" fxLayoutAlign="center center" style="width: 100%">
+    <div class="content-wrapper">
+      <div class="main-breadcrumb" fxLayout="row" fxLayoutAlign="start center">
+        <span>Home</span>
+        <img src="assets/images/Breadcrumbs-arrow.png" alt="" />
+        <span>Products</span>
+      </div>
     </div>
   </div>
 
-  <div class="page-breadcrumb" fxLayout="column" fxLayoutAlign="start center">
-    <div
-      class="content-wrapper"
-      fxLayout="row"
-      fxLayoutAlign="start center"
-      fxLayout.lt-sm="column"
-      fxLayoutAlign.lt-sm="center start"
-    >
-      <div>
-        <span class="page-controll-title">
-          <a class="link-black" href="/">10Gix</a>
-        </span>
-        <span class="small-arrow">></span>
-        <span class="page-controll-title-color">
-          <a class="link-blue" href="/">Products</a>
-        </span>
-        <span class="small-arrow">></span>
-      </div>
-      <div fxFlex></div>
-      <div class="view-switch" fxLayout="row">
+  <div class="page-breadcrumb" fxLayout="row" fxLayoutAlign="center center">
+    <div class="content-wrapper">
+      <div
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        fxLayout.lt-sm="column"
+        fxLayoutAlign.lt-sm="center start"
+        style="width: 100%"
+      >
         <div>
-          <a id="List" [routerLink]="['list']">List</a>
-          <a id="Thumb" [routerLink]="['thumb']">Thumb</a>
+          <span class="page-controll-title">
+            <a class="link-black" href="/">10Gix</a>
+          </span>
+          <span class="small-arrow">></span>
+          <span class="page-controll-title-color">
+            <a class="link-blue" href="/">Products</a>
+          </span>
+          <span class="small-arrow">></span>
+        </div>
+        <div class="view-switch" fxLayout="row">
+          <div>
+            <a id="List" [routerLink]="['list']">List</a>
+            <a id="Thumb" [routerLink]="['thumb']">Thumb</a>
+          </div>
         </div>
       </div>
     </div>
