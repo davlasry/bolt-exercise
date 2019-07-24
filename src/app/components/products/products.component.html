@@ -1,5 +1,4 @@
 <div class="products-container" fxLayout="column" fxLayoutAlign="start center">
-  <h1>PRODUCTS</h1>
   <div class="main-breadcrumb" fxLayout="row" fxLayoutAlign="center center">
     <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center">
       <span>Home</span>
@@ -8,44 +7,27 @@
     </div>
   </div>
 
-  <div class="products-header">
-    <div class="page-breadcrumb"></div>
-    <div class="view-switch"></div>
-  </div>
-
-  <div
-    class="product-container"
-    fxLayout="column"
-    fxLayoutAlign="center center"
-  >
-    <div class="product-content content-wrapper" fxLayout="row">
-      <div class="product-description">
-        <div class="product-name">4U 60BAY STORAGE JBOD</div>
-        <div class="product-model">ZJ60B</div>
-        <div class="product-features">
-          <p>60-bay Dual-domain and Full Redundancy JBOD Enclosure</p>
-          <p>
-            High Reliability: Featuring redundant 80+ Gold power supplies,
-            redundant cooling fans, and Dual-domain SAS expander controllers
-          </p>
-          <p>(1+1 module) maximizes server protection</p>
-        </div>
-        <div class="more-button">
-          <img src="assets/images/learn-more-blue-btn.png" alt="" />
+  <div class="page-breadcrumb" fxLayout="column" fxLayoutAlign="start center">
+    <div class="content-wrapper" fxLayout="row" fxLayoutAlign="start center">
+      <div>
+        <span class="page-controll-title">
+          <a class="link-black" href="/">10Gix</a>
+        </span>
+        <span class="small-arrow">></span>
+        <span class="page-controll-title-color">
+          <a class="link-blue" href="/">Products</a>
+        </span>
+        <span class="small-arrow">></span>
+      </div>
+      <div fxFlex></div>
+      <div class="view-switch" fxLayout="row">
+        <div>
+          <a id="List" [routerLink]="['list']">List</a>
+          <a id="Thumb" [routerLink]="['thumb']">Thumb</a>
         </div>
       </div>
-      <div class="product-images">
-        <div class="main-image">
-          <img src="assets/images/product_image1.png" alt="" />
-        </div>
-        <div class="miniatures">
-          <img src="assets/images/product_image1.png" alt="" />
-          <img src="assets/images/product_image2.png" alt="" />
-          <img src="assets/images/product_image3.png" alt="" />
-          <img src="assets/images/product_image4.png" alt="" />
-        </div>
-      </div>
-      <div class="product-video"></div>
     </div>
   </div>
+
+  <router-outlet></router-outlet>
 </div>

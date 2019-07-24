@@ -3,63 +3,74 @@
   width: 100%;
 }
 
-.product-container {
+::ng-deep .main-breadcrumb {
   width: 100%;
-  min-height: 350px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  height: 60px;
+}
 
-  &:nth-child(odd) {
-    -webkit-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
-    -moz-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
-    box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
+.page-breadcrumb {
+  width: 100%;
+
+  .page-controll-title {
+    color: #000;
+    font-size: 28px;
   }
 
-  .product-description {
-    width: 300px;
-    height: 330px;
-    margin-right: 10px;
-
-    p {
-      font-size: 14px;
-      letter-spacing: 1px;
-      line-height: 25px;
-      margin-top: 25px;
-      max-height: 300px;
-    }
-    .product-name {
-      color: #000;
-      font-size: 18px;
-      font-weight: bold;
-    }
+  .link-black {
+    text-decoration: none;
+    color: #000;
   }
 
-  .product-images {
-    width: 315px;
-    height: 330px;
-    display: inline-block;
-    margin: 10px;
-    .main-image {
-      img {
-        cursor: pointer;
-        width: 225px;
-        height: 160px;
-        display: block;
-        margin: 0 auto;
-      }
-    }
-    .miniatures {
-      img {
-        width: 100px;
-        height: 75px;
-        &.active {
-          border: 1px solid blue;
-        }
-      }
-    }
+  .page-controll-title-color {
+    margin-left: 10px;
+    color: #a3b2ff;
+    font-size: 28px;
+  }
+
+  .link-blue {
+    text-decoration: none;
+    color: #a3b2ff;
+  }
+
+  .small-arrow {
+    margin-left: 10px;
+    font-size: 28px;
+    color: #000;
   }
 }
 
-.main-breadcrumb {
-  width: 100%;
+.view-switch {
+  a {
+    height: 22px;
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    margin: 19px 5px;
+    width: 70px;
+    padding-left: 25px;
+    text-decoration: none;
+  }
+
+  #List {
+    background: url('/assets/images/List-btn.png') no-repeat 0 2px;
+    padding-left: 30px;
+
+    &:hover {
+      color: red;
+      background: url('/assets/images/List-btn.png') no-repeat 0 -25px;
+      padding-left: 30px;
+    }
+  }
+
+  #Thumb {
+    background: url('/assets/images//thumb-btn.png') no-repeat 0 2px;
+    padding-left: 20px;
+    margin-right: 25px;
+
+    &:hover {
+      color: red;
+      background: url('/assets/images//thumb-btn.png') no-repeat 0 -27px;
+      padding-left: 20px;
+    }
+  }
 }
