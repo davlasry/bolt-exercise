@@ -1,58 +1,65 @@
 .products-container {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
+}
 
-  .product-container {
-    max-width: 960px;
-    display: flex;
-    flex-direction: row;
+.product-container {
+  width: 100%;
+  min-height: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
-    .product-description {
-      width: 300px;
-      height: 330px;
+  &:nth-child(odd) {
+    -webkit-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
+    -moz-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
+    box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
+  }
 
-      // float: left;
-      margin: 10px;
-      p {
-        font-size: 14px;
-        letter-spacing: 1px;
-        line-height: 25px;
-        margin-top: 25px;
-        max-height: 300px;
-      }
-      .product-name {
-        color: #000;
-        font-size: 18px;
-        font-weight: bold;
+  .product-description {
+    width: 300px;
+    height: 330px;
+    margin-right: 10px;
+
+    p {
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 25px;
+      margin-top: 25px;
+      max-height: 300px;
+    }
+    .product-name {
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .product-images {
+    width: 315px;
+    height: 330px;
+    display: inline-block;
+    margin: 10px;
+    .main-image {
+      img {
+        cursor: pointer;
+        width: 225px;
+        height: 160px;
+        display: block;
+        margin: 0 auto;
       }
     }
-
-    .product-images {
-      width: 315px;
-      height: 330px;
-      display: inline-block;
-      // float: left;
-      margin: 10px;
-      .main-image {
-        img {
-          cursor: pointer;
-          width: 225px;
-          height: 160px;
-          display: block;
-          margin: 0 auto;
-        }
-      }
-      .miniatures {
-        img {
-          width: 100px;
-          height: 75px;
-          &.active {
-            border: 1px solid blue;
-          }
+    .miniatures {
+      img {
+        width: 100px;
+        height: 75px;
+        &.active {
+          border: 1px solid blue;
         }
       }
     }
   }
+}
+
+.main-breadcrumb {
+  width: 100%;
 }
