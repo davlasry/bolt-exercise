@@ -7,11 +7,13 @@
   min-height: 350px;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 0 30px;
 
-  &:nth-child(odd) {
+  &.large:nth-child(odd) {
     -webkit-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
     -moz-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
     box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
+    padding: 0;
   }
 
   .product-description {
