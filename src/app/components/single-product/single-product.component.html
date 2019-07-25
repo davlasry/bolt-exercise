@@ -3,7 +3,7 @@
   fxLayout="column"
   fxLayoutAlign="start center"
 >
-  <div class="content-wrapper" fxLayout="column">
+  <div class="content-wrapper">
     <div
       class="product-page-breadcrumbs"
       fxLayout="row"
@@ -57,8 +57,8 @@
           </li>
         </ul>
       </div>
-      <div class="product-image">
-        <img src="assets/images/product_image1.png" alt="" />
+      <div class="product-image" fxLayout="row" fxLayoutAlign="center">
+        <img src="{{ activeImageUrl }}" alt="" />
       </div>
     </div>
     <div
@@ -68,18 +68,17 @@
       fxLayoutWrap
       fxLayoutGap="10px"
     >
-      <div class="miniature-container Blue-line active" fxFlex="24">
-        <div class="active-small-images" style="display: block;"></div>
-        <img src="assets/images/product_image1.png" alt="" />
-      </div>
-      <div class="miniature-container Blue-line" fxFlex="24">
-        <img src="assets/images/product_image2.png" alt="" />
-      </div>
-      <div class="miniature-container Blue-line" fxFlex="24">
-        <img src="assets/images/product_image3.png" alt="" />
-      </div>
-      <div class="miniature-container Blue-line" fxFlex="24">
-        <img src="assets/images/product_image4.png" alt="" />
+      <div
+        class="miniature-container Blue-line"
+        fxFlex="24"
+        *ngFor="let image of images"
+      >
+        <div
+          class="active-small-images"
+          style="display: block;"
+          *ngIf="image.url == activeImageUrl"
+        ></div>
+        <img src="{{ image.url }}" alt="" (click)="onClickPicture(image.url)" />
       </div>
     </div>
   </div>

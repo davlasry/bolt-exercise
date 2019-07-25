@@ -1,6 +1,5 @@
 .product-page-breadcrumbs {
   height: 60px;
-  // padding: 0 10%;
 
   span {
     margin-right: 5px;
@@ -28,12 +27,7 @@
 }
 
 .top-part {
-  // padding: 0 10%;
-
   .product-base-data {
-    // width: 380px;
-    // height: 450px;
-
     .product-base-data-title {
       color: #000;
       font-size: 28px;
@@ -46,6 +40,8 @@
       font-size: 19px;
       font-weight: bold;
       margin-left: 10px;
+      margin-bottom: 20px;
+      display: inline-block;
     }
 
     .product-blue-bullet {
@@ -63,17 +59,11 @@
 }
 
 .images-thumbnails {
-  // padding: 0 20px;
-
   .Blue-line {
     border: solid 1px #b2b2b2;
     position: relative;
-    // margin-top: 10px;
-    // margin-left: 21px;
     margin: 10px;
     max-width: 100%;
-    // height: 140px;
-    // width: 210px;
     display: inline-block;
     cursor: pointer;
 
@@ -84,8 +74,6 @@
 
     img {
       max-width: 100%;
-      // height: 140px;
-      // width: 210px;
     }
   }
 

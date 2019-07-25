@@ -7,9 +7,8 @@
   min-height: 350px;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 0 30px;
 
-  &.large:nth-child(odd) {
+  &:nth-child(odd) {
     -webkit-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
     -moz-box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
     box-shadow: 0 0 6px 3px rgba(109, 193, 229, 0.35);
@@ -17,8 +16,6 @@
   }
 
   .product-description {
-    width: 300px;
-    height: 330px;
     margin: 10px 10px 10px 0;
 
     p {
@@ -41,16 +38,13 @@
   }
 
   .product-images {
-    width: 230px;
-    height: 330px;
     display: inline-block;
-    margin: 10px 30px;
+    margin: 20px;
 
     .main-image {
       img {
         cursor: pointer;
-        width: 225px;
-        height: 160px;
+        max-height: 160px;
         display: block;
         margin: 0 auto;
       }
@@ -58,11 +52,12 @@
     .miniatures {
       .miniature {
         border: solid 1px #b2b2b2;
-        margin-left: 10px;
-        margin-bottom: 8px;
-        width: 100px;
-        height: 75px;
-        display: inline-block;
+        margin: 8px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         cursor: pointer;
 
         &:hover {
@@ -72,16 +67,16 @@
 
         .active-small-images {
           position: absolute;
-          height: 75px;
-          width: 99px;
+          top: 0;
+          width: 100%;
+          height: 25px;
           background: url('/assets/images/polygon.png') no-repeat 0 0;
           background-size: contain;
         }
       }
 
       img {
-        width: 100px;
-        height: 75px;
+        max-width: 100%;
         &.active {
           border: 1px solid blue;
         }
@@ -92,16 +87,13 @@
 
 .product-video {
   margin: 10px;
-  width: 285px;
-  height: 330px;
 
   .video-content {
-    margin-left: 60px;
     width: 122px;
     margin-right: 5px;
 
     .video-thumbnail {
-      margin: 8px;
+      margin: 8px 0;
       border: solid 1px #dde2ff;
       width: 104px;
       height: 78px;
@@ -115,19 +107,16 @@
 
     .video-inside-title {
       font-size: 14px;
-      margin-left: 15px;
     }
 
     .video-inside-descriptions {
       font-size: 12px;
-      margin-left: 15px;
       width: 100px;
     }
   }
 
   .video-header {
     margin-bottom: 20px;
-    margin-left: 70px;
     margin-top: 10px;
 
     .video-header-title {
@@ -139,6 +128,7 @@
     .video-header-subtitle {
       color: #27a8e0;
       font-size: 20px;
+      min-width: 70px;
     }
   }
 }

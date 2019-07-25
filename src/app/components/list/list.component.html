@@ -1,66 +1,219 @@
-<div
-  class="product-container"
-  fxLayout="column"
-  fxLayoutAlign="center center"
-  ngClass.gt-sm="large"
->
-  <div class="product-content content-wrapper" fxLayout="row">
-    <div class="product-description">
-      <div class="product-name">4U 60BAY STORAGE JBOD</div>
-      <div class="product-model">ZJ60B</div>
-      <div class="product-features">
-        <p>60-bay Dual-domain and Full Redundancy JBOD Enclosure</p>
-        <p>
-          High Reliability: Featuring redundant 80+ Gold power supplies,
-          redundant cooling fans, and Dual-domain SAS expander controllers
-        </p>
-        <p>(1+1 module) maximizes server protection</p>
+<div class="product-container" fxLayout="row" fxLayoutAlign="center center">
+  <div class="content-wrapper">
+    <div
+      class="product-content"
+      fxLayout="row"
+      fxLayoutAlign="space-between start"
+      fxLayout.lt-md="column"
+    >
+      <div class="product-description" fxLayout="column" fxFlex="32">
+        <div class="product-name">4U 60BAY STORAGE JBOD</div>
+        <div class="product-model">ZJ60B</div>
+        <div class="product-features">
+          <p>60-bay Dual-domain and Full Redundancy JBOD Enclosure</p>
+          <p>
+            High Reliability: Featuring redundant 80+ Gold power supplies,
+            redundant cooling fans, and Dual-domain SAS expander controllers
+          </p>
+          <p>(1+1 module) maximizes server protection</p>
+        </div>
+        <div class="more-button">
+          <a [routerLink]="['/single-product']">
+            <img src="assets/images/learn-more-blue-btn.png" alt="" />
+          </a>
+        </div>
       </div>
-      <div class="more-button">
-        <a [routerLink]="['/single-product']">
-          <img src="assets/images/learn-more-blue-btn.png" alt="" />
-        </a>
+      <div class="product-images" fxLayout="column" fxFlex="32">
+        <div class="main-image">
+          <img src="{{ activeImageUrl }}" alt="" />
+        </div>
+        <div
+          class="miniatures"
+          fxLayoutAlign="space-between"
+          fxLayoutWrap
+          fxLayout="row wrap"
+        >
+          <div
+            class="miniature Blue-line"
+            fxFlex="48"
+            fxFlex.lt-md="24"
+            *ngFor="let image of images"
+          >
+            <div
+              id="small-image1-img"
+              class="active-small-images"
+              style="display: block;"
+              *ngIf="image.url == activeImageUrl"
+            ></div>
+            <img
+              src="{{ image.url }}"
+              alt=""
+              (click)="onClickPicture(image.url)"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="product-video"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+        fxFlex="32"
+      >
+        <div class="video-header" fxLayout="row">
+          <span class="video-header-title">Product </span
+          ><span class="video-header-subtitle">Video ></span>
+        </div>
+        <div class="video-content" fxLayout="column">
+          <img
+            src="assets/images/product_image1.png"
+            class="video-thumbnail"
+            alt=""
+          />
+          <span class="video-inside-title">ZJ60B</span>
+          <p class="video-inside-descriptions">
+            60 x 3.5”/2.5" Hot-swap hard drives
+          </p>
+        </div>
       </div>
     </div>
-    <div class="product-images">
-      <div class="main-image">
-        <img src="assets/images/product_image1.png" alt="" />
-      </div>
-      <div class="miniatures">
-        <div class="miniature active Blue-line">
-          <div
-            id="small-image1-img"
-            class="active-small-images"
-            style="display: block;"
-          ></div>
-          <img src="assets/images/product_image1.png" alt="" />
+  </div>
+</div>
+<div class="product-container" fxLayout="row" fxLayoutAlign="center center">
+  <div class="content-wrapper">
+    <div
+      class="product-content"
+      fxLayout="row"
+      fxLayoutAlign="space-between start"
+      fxLayout.lt-md="column"
+    >
+      <div class="product-description" fxLayout="column" fxFlex="32">
+        <div class="product-name">4U 48BAY STORAGE APPLIANCE</div>
+        <div class="product-model">ZJ60B</div>
+        <div class="product-features">
+          <p>60-bay Dual-domain and Full Redundancy JBOD Enclosure</p>
+          <p>
+            High Reliability: Featuring redundant 80+ Gold power supplies,
+            redundant cooling fans, and Dual-domain SAS expander controllers
+          </p>
+          <p>(1+1 module) maximizes server protection</p>
         </div>
-        <div class="miniature Blue-line">
+        <div class="more-button">
+          <a [routerLink]="['/single-product']">
+            <img src="assets/images/learn-more-blue-btn.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="product-images" fxLayout="column" fxFlex="32">
+        <div class="main-image">
           <img src="assets/images/product_image2.png" alt="" />
         </div>
-        <div class="miniature Blue-line">
-          <img src="assets/images/product_image3.png" alt="" />
+        <div
+          class="miniatures"
+          fxLayoutAlign="space-between"
+          fxLayoutWrap
+          fxLayout="row wrap"
+        >
+          <div
+            class="miniature Blue-line"
+            fxFlex="48"
+            fxFlex.lt-md="24"
+            *ngFor="let image of images"
+          >
+            <img src="{{ image.url }}" alt="" />
+          </div>
         </div>
-        <div class="miniature Blue-line">
-          <img src="assets/images/product_image4.png" alt="" />
+      </div>
+      <div
+        class="product-video"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+        fxFlex="32"
+      >
+        <div class="video-header" fxLayout="row">
+          <span class="video-header-title">Product </span
+          ><span class="video-header-subtitle">Video ></span>
+        </div>
+        <div class="video-content" fxLayout="column">
+          <img
+            src="assets/images/product_image1.png"
+            class="video-thumbnail"
+            alt=""
+          />
+          <span class="video-inside-title">ZJ60B</span>
+          <p class="video-inside-descriptions">
+            60 x 3.5”/2.5" Hot-swap hard drives
+          </p>
         </div>
       </div>
     </div>
-    <div class="product-video" fxLayout="column" fxLayoutAlign="start center">
-      <div class="video-header" fxLayout="row">
-        <span class="video-header-title">Product </span
-        ><span class="video-header-subtitle">Video ></span>
+  </div>
+</div>
+<div class="product-container" fxLayout="row" fxLayoutAlign="center center">
+  <div class="content-wrapper">
+    <div
+      class="product-content"
+      fxLayout="row"
+      fxLayoutAlign="space-between start"
+      fxLayout.lt-md="column"
+    >
+      <div class="product-description" fxLayout="column" fxFlex="32">
+        <div class="product-name">1U 4BAY STORAGE APPLIANCE</div>
+        <div class="product-model">ZJ60B</div>
+        <div class="product-features">
+          <p>60-bay Dual-domain and Full Redundancy JBOD Enclosure</p>
+          <p>
+            High Reliability: Featuring redundant 80+ Gold power supplies,
+            redundant cooling fans, and Dual-domain SAS expander controllers
+          </p>
+          <p>(1+1 module) maximizes server protection</p>
+        </div>
+        <div class="more-button">
+          <a [routerLink]="['/single-product']">
+            <img src="assets/images/learn-more-blue-btn.png" alt="" />
+          </a>
+        </div>
       </div>
-      <div class="video-content" fxLayout="column">
-        <img
-          src="assets/images/product_image1.png"
-          class="video-thumbnail"
-          alt=""
-        />
-        <span class="video-inside-title">ZJ60B</span>
-        <p class="video-inside-descriptions">
-          60 x 3.5”/2.5" Hot-swap hard drives
-        </p>
+      <div class="product-images" fxLayout="column" fxFlex="32">
+        <div class="main-image">
+          <img src="assets/images/product_image3.png" alt="" />
+        </div>
+        <div
+          class="miniatures"
+          fxLayoutAlign="space-between"
+          fxLayoutWrap
+          fxLayout="row wrap"
+        >
+          <div
+            class="miniature Blue-line"
+            fxFlex="48"
+            fxFlex.lt-md="24"
+            *ngFor="let image of images"
+          >
+            <img src="{{ image.url }}" alt="" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="product-video"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+        fxFlex="32"
+      >
+        <div class="video-header" fxLayout="row">
+          <span class="video-header-title">Product </span
+          ><span class="video-header-subtitle">Video ></span>
+        </div>
+        <div class="video-content" fxLayout="column">
+          <img
+            src="assets/images/product_image1.png"
+            class="video-thumbnail"
+            alt=""
+          />
+          <span class="video-inside-title">ZJ60B</span>
+          <p class="video-inside-descriptions">
+            60 x 3.5”/2.5" Hot-swap hard drives
+          </p>
+        </div>
       </div>
     </div>
   </div>
